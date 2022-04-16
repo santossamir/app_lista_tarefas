@@ -2,7 +2,7 @@
     class Conexao {
         
         private $host = 'localhost';
-        private $dbname = 'php_com_pdo';
+        private $dbname = 'db_app_lista_tarefas';
         private $user = 'root';
         private $pass = '';
 
@@ -10,15 +10,15 @@
             try{
 
                 $conexao = new PDO(
-                    "musql:host=$this->host;dbname=$this->dbname",
+                    "mysql:host=$this->host;dbname=$this->dbname",
                     "$this->user",
                     "$this->pass"
                 );
 
                 return $conexao;
-                
+
             } catch(PDOException $e){
-               echo '<p>' .$e->getMessege(). '</p>'; 
+               echo '<p>' .$e->getMessage(). '</p>'; 
             }
         }
     }
