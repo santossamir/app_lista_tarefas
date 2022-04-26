@@ -16,7 +16,7 @@
 			function editar(id, txt_tarefa){
 				//Form de Edicação
 				let form = document.createElement('form');
-				form.action = '#';
+				form.action = 'tarefa_controller.php?acao=atualizar';
 				form.method = 'post';
 				form.className = 'row';
 
